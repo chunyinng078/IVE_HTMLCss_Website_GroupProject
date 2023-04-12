@@ -1,0 +1,217 @@
+/*background*/
+body {
+  background-position: center;
+  /* center the bg*/
+  background-size: cover;
+  /* make the bg fit in full size*/
+  background-attachment: fixed;
+  /* no matter how you zoom the web, the background stay the same*/
+}
+
+/*Responsive Meun*/
+@media only screen and (max-width: 1000px){/*when width<1001px*/
+
+
+  .navbar ul{
+    height: 320px;
+    display: flex;    /*only use its column property*/
+    flex-direction: column;  /*vertical*/
+    align-items: center;  /*make verticaled column in middle*/
+  }
+  
+
+  .navbar .sub-meun ul{
+    height: auto;   /*set the height of sub meun*/
+  }
+
+
+
+}
+
+/*meun---------------------------------------------------------------------------------------------------------------------*/
+.navbar ul {/*the whole menu*/
+  padding: 0; /*remove spaces on the left*/
+  border-style: solid ;   /*make a line cover the border*/
+  border-color: rgb(28,59,68);   /*color*/
+  border-radius: 30px;  /*make the border round*/
+  background-color: rgba(6, 24, 30, 255); /*color*/
+  opacity: .95;   /*add opacity to the meun*/
+
+  text-align: center;     /*center the list in middle*/
+  font-weight: bold;      /*bold the word*/
+  font-size: 18px;        /*set font size*/
+  
+} 
+
+.navbar li {/*each item of main menu*/
+  
+  display: inline-block; /*make the list item  line up in horizontal, inline mean one line can have more than one block*/
+  width: 120px;   /*set width of the item on the main list*/
+  padding: 15px;  /*set padding of the item on the main list*/
+}
+
+.navbar ul li a { /*the words of the main menu*/
+  
+  text-decoration: none;    /*make link dont have a underline and change color*/
+  color: rgba(232, 202, 123, 255); /*change the word color on the main list*/
+}
+
+.navbar ul li:hover { 
+  
+  background-color: rgba(20, 67, 86, 255);  /*color*/
+  border-bottom: 1px solid azure; /*set border*/
+  border-radius: 50px;    /*set border*/
+  transition: .4s ease-in-out;  /*set transition */
+}
+
+.navbar img {   /*icon*/
+  width: 60%;   /*set it smaller*/
+}
+
+.sub-meun {
+  
+  margin: -17px; /*add margin on left to make it in right place (outside the submeun)*/
+  position: absolute;   /*it position will be position according to the main meun*/
+  transform: scale(0.0);  /*hide the list*/
+
+}
+
+.sub-meun ul{
+  display: flex;    /*fill all width, only use its column property*/
+  flex-direction: column;  /*vertical*/
+
+}
+
+.navbar ul li:hover .sub-meun {
+  margin-top: 16px;     /*add margin on top to make it in right place*/
+  transform: scale(1);  /*display the list*/
+  transition: all 0.4s ease-out;
+  
+}
+
+/* main content box*/
+.main-content {
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
+  color: #d0c8af;
+  background-color: rgba(6, 24, 30, 0.8);
+  border: 1px solid #000000;
+  padding: 4%;
+  text-align: left;
+  border-radius: 20px;
+}
+
+/*header*/
+.main-content h1 {
+  text-align: center;
+  border-width: 1px;
+  border-bottom: 3px solid rgb(43, 110, 129);
+}
+
+form {
+  width: 80%;
+  margin: auto;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #ada9a9;
+  font-size: 25px;
+}
+
+/*Name incorrect message*/
+label {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #eb7272;
+}
+
+.fieldset {
+  border-radius: 15px;
+  font-family: Arial;
+  font-size: 25px;
+  color: #d0c8af;
+  margin: auto;
+  border: 5px solid rgb(0, 39, 252);
+}
+
+#playedTime {
+  font-size: 20px;
+  width: 250px;
+}
+
+/*second fieldset question*/
+#question {
+  margin-top: 20px;
+}
+
+/*rank suggest message */
+#rankSuggest {
+  font-size: 20px;
+  color: #48e8c3;
+}
+
+/*submit and reset button*/
+#center {
+  text-align: center;
+}
+
+/* format the submit and reset button */
+#center input {
+  font-size: 20px;
+  margin: 20px;
+  background-color: rgba(8, 229, 203, 0.72);
+  border-radius: 20px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+/*set input box is not close with question and font size*/
+input,
+select,
+textarea {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+/*mouseover color*/
+.star {
+  color: #97c4f8;
+}
+
+/*click color*/
+.checked {
+  color: orange;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 800px) {
+  .fieldset {
+    font-size: 16px;
+  }
+
+  /*Submit and reset button*/
+  #center input {
+    font-size: 10px;
+  }
+
+  #nameLabel {
+    font-size: 16px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  #rankSuggest {
+    font-size: 16px;
+  }
+
+  #center input {
+    font-size: 16px;
+  }
+}

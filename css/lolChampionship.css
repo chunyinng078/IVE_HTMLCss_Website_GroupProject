@@ -1,0 +1,237 @@
+/*    background    */
+body {
+  background-position: center;
+  /* center the bg*/
+  background-size: cover;
+  /* make the bg fit in full size*/
+  background-attachment: fixed;
+  /* no matter how you zoom the web, the background stay the same*/
+}
+
+/*Responsive Meun*/
+@media only screen and (max-width: 1000px){/*when width<1001px*/
+
+
+  .navbar ul{
+    height: 320px;
+    display: flex;    /*only use its column property*/
+    flex-direction: column;  /*vertical*/
+    align-items: center;  /*make verticaled column in middle*/
+  }
+  
+
+  .navbar .sub-meun ul{
+    height: auto;   /*set the height of sub meun*/
+  }
+
+
+
+}
+
+/*meun---------------------------------------------------------------------------------------------------------------------*/
+.navbar ul {/*the whole menu*/
+  padding: 0; /*remove spaces on the left*/
+  border-style: solid ;   /*make a line cover the border*/
+  border-color: rgb(28,59,68);   /*color*/
+  border-radius: 30px;  /*make the border round*/
+  background-color: rgba(6, 24, 30, 255); /*color*/
+  opacity: .95;   /*add opacity to the meun*/
+
+  text-align: center;     /*center the list in middle*/
+  font-weight: bold;      /*bold the word*/
+  font-size: 18px;        /*set font size*/
+  
+} 
+
+.navbar li {/*each item of main menu*/
+  
+  display: inline-block; /*make the list item  line up in horizontal, inline mean one line can have more than one block*/
+  width: 120px;   /*set width of the item on the main list*/
+  padding: 15px;  /*set padding of the item on the main list*/
+}
+
+.navbar ul li a { /*the words of the main menu*/
+  
+  text-decoration: none;    /*make link dont have a underline and change color*/
+  color: rgba(232, 202, 123, 255); /*change the word color on the main list*/
+}
+
+.navbar ul li:hover { 
+  
+  background-color: rgba(20, 67, 86, 255);  /*color*/
+  border-bottom: 1px solid azure; /*set border*/
+  border-radius: 50px;    /*set border*/
+  transition: .4s ease-in-out;  /*set transition */
+}
+
+.navbar img {   /*icon*/
+  width: 60%;   /*set it smaller*/
+}
+
+.sub-meun {
+  
+  margin: -17px; /*add margin on left to make it in right place (outside the submeun)*/
+  position: absolute;   /*it position will be position according to the main meun*/
+  transform: scale(0.0);  /*hide the list*/
+
+}
+
+.sub-meun ul{
+  display: flex;    /*fill all width, only use its column property*/
+  flex-direction: column;  /*vertical*/
+
+}
+
+.navbar ul li:hover .sub-meun {
+  margin-top: 16px;     /*add margin on top to make it in right place*/
+  transform: scale(1);  /*display the list*/
+  transition: all 0.4s ease-out;
+  
+}
+
+/*          page content        */
+/*main content box*/
+.main-content {
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
+  color: #d0c8af;
+  background-color: rgba(6, 24, 30, 0.8);
+  border: 1px solid #000000;
+  padding: 4%;
+  text-align: left;
+}
+
+/* format main title */
+.main-content h1 {
+  text-align: center;
+  border-width: 1px;
+  border-bottom: 3px solid rgb(43, 110, 129);
+}
+
+/*    Slide css       */
+/*slides header*/
+.WorldChampion {
+  text-align: center;
+  font-size: 50px;
+  font-family: Impact;
+}
+
+.mySlides {
+  display: none;
+  text-align: center;
+  color: rgba(155, 23, 23, 0.8);
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+  font-size: 30px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.6
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* format slides image */
+.mySlides img {
+  vertical-align: middle;
+  height: 300px;
+  border: 2px solid #504e60;
+  border-radius: 15px;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* format content box */
+.information,
+.Champion {
+  margin: auto;
+  width: 90%;
+  border: 5px solid rgba(76, 103, 123, 0.45);
+  background-color: rgba(76, 103, 123, 0.45);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 2px 1px 21px 5px #000000;
+}
+
+/* format first box title*/
+.information h2 {
+  text-align: center;
+  color: rgb(242, 59, 59);
+  font-size: 45px;
+  font-style: italic;
+}
+
+/*format all the content text*/
+.Champion p,
+.information p {
+  font-family: Arial;
+  font-size: 20px;
+  color: #d0c8af;
+}
+
+/* format second box title */
+.Champion h2 a {
+  color: #341d96;
+  background-color: rgba(221, 160, 202, 0.76);
+  border: 5px solid rgba(221, 160, 202, 0.76);
+  border-radius: 10px;
+  font-family: Impact;
+  font-size: 40px;
+}
+
+/* format subtitle */
+.Champion h3 {
+  font-size: 30px;
+  text-decoration: underline solid rgb(163, 161, 212);
+  color: rgb(163, 161, 212);
+  font-style: italic;
+}
+
+/* format the image(teamIcon and lolWC) */
+#teamIcon,
+#lolWC {
+  float: right;
+  height: auto;
+  width: 150px;
+  cursor: pointer;
+}
+
+/* format show country hints text */
+#showCountryText {
+  font-size: 20px;
+  text-align: right;
+}
+
+/* format the image(Country flag)*/
+.Country {
+  display: none;
+  border: 1px solid black;
+}
+
+/*     GoToTop Button       */
+.goToTop {
+  text-align: center;
+}
+
+#top {
+  width: 10%;
+  background-color: rgba(0, 186, 255, 0.81);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#top:hover {
+  background-color: yellow;
+}

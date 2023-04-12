@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <link rel="icon" href="image/logo_2.jpg">
+      <link rel="stylesheet" href="css/style.css">
+      <title>Items</title>
+      <script>
+            var sound = new Audio( "sound/coin.mp3");// create a audio object called sound, it will play the file that inputted
+      </script>
+</head>
+
+<body  background="image/background.gif">
+      <!--nav bar     a ul contain li, and those li may contain  ul and li -->
+      <div class="navbar">
+            <ul>
+                  <li><a href="index.html">
+                              <div class="logo"> <img src="image/logo.png" alt="lol-logo">
+                              </div>
+                        </a>
+                  </li>
+                  <li><a> LOL</a>
+                        <div class="sub-meun">
+                              <ul>
+                                    <li><a href="index.html">📙How to play</a> </li>
+                                    <li><a href="item.html">Item</a></li>
+                              </ul>
+                        </div>
+                  </li>
+                  <li><a> Hero</a>
+                        <div class="sub-meun">
+                              <ul>
+                                    <li><a href="Morgana.html">✵ Morgana ✵</a> </li>
+                                    <li><a href="item.html">✵ Kayle ✵</a></li>
+                              </ul>
+                        </div>
+                  </li>
+
+
+                  <li><a href="lolChampionship.html">Teams</a>
+
+                  </li>
+
+                  <li><a>Resources</a>
+                        <div class="sub-meun">
+                              <ul>
+                                    <li><a href="https://lol.garena.tw/" target="_blank">Offical Website</a></li>
+                                    <li><a href="https://www.op.gg/" target="_blank">Useful Website</a></li>
+                              </ul>
+                        </div>
+
+                  </li>
+
+                  <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+
+
+      </div>
+
+      <div class="item-set">
+            <h1 class="heading">Famous Item in LOL<br>(Click to photo to see their name)</h1>
+            <div class="item type">
+                  <h2 class="sub-heading">Tank Item:<br></h2>
+                  <div class="item-photo" onclick="alert('Name: The Black Cleaver')" onmousedown=sound.play()> <img
+                              src="image/item_TheBlackCleaver.png">
+
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Spirit Visage')" onmousedown=sound.play()> <img
+                              src="image/item_SpiritVisage.png">
+
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Thornmail')" onmousedown=sound.play()> <img
+                              src="image/item_Thornmail.png">
+
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Warmogs Armor')" onmousedown=sound.play()> <img
+                              src="image/item_WarmogsArmor.png">
+
+                  </div>
+            </div>
+            <div class="item type">
+                  <h2 class="sub-heading">AD Attack Item:<br></h2>
+                  <div class="item-photo" onclick="alert('Name: Infinity Edge')" onclick="" onmousedown=sound.play()>
+                        <img src="image/item_InfinityEdge.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Trinity Force')" onmousedown=sound.play()> <img
+                              src="image/item_TrinityForce.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Mercurial Scimitar')" onmousedown=sound.play()> <img
+                              src="image/item_Mercurial Scimitar.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Maw of Malmortius')" onmousedown=sound.play()> <img
+                              src="image/item_MawOfMalmortius.png">
+                  </div>
+            </div>
+            <div class="item type">
+                  <h2 class="sub-heading">Support Item:<br></h2>
+                  <div class="item-photo" onclick="alert('Name: Ardent Censer')" onmousedown=sound.play()> <img
+                              src="image/item_ArdentCenser.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Shard of True Ice')" onmousedown=sound.play()> <img
+                              src="image/item_ShardofTrueIce.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Shurelyas Battlesong')" onmousedown=sound.play()> <img
+                              src="image/item_ShurelyasBattlesong.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Redemption')" onmousedown=sound.play()> <img
+                              src="image/item_Redemption.png">
+
+                  </div>
+            </div>
+            <div class="item type">
+                  <h2 class="sub-heading"> AP Attack Item:<br></h2>
+                  <div class="item-photo" onclick="alert('Name: Rabadons Deathcap')" onmousedown=sound.play()> <img
+                              src="image/item_RabadonsDeathcap.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Void Staff ')" onmousedown=sound.play()> <img
+                              src="image/item_VoidStaff.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Lich Bane')" onmousedown=sound.play()> <img
+                              src="image/item_LichBane.png">
+                  </div>
+                  <div class="item-photo" onclick="alert('Name: Demonic Embrace')" onmousedown=sound.play()> <img
+                              src="image/item_DemonicEmbrace.png">
+                  </div>
+            </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="goToTop">
+            <button id="top" onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+      </div>
+      <script>
+            /*Go To Top*/
+            function topFunction() {
+                  document.documentElement.scrollTop = 0;
+            }
+      </script>
+</body>
+
+</html>

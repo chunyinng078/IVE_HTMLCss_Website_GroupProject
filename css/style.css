@@ -1,0 +1,203 @@
+/*background*/
+body{
+  background-position: center;  /* center the bg*/
+  background-size: cover; /* make the bg fit in full size*/
+  background-attachment: fixed; /* no matter how you zoom the web, the background stay the same*/
+}
+
+/*Responsive Meun*/
+@media only screen and (max-width: 1000px){/*when width<1001px*/
+
+
+  .navbar ul{
+    height: 320px;
+    display: flex;    /*only use its column property*/
+    flex-direction: column;  /*vertical*/
+    align-items: center;  /*make verticaled column in middle*/
+  }
+  
+
+  .navbar .sub-meun ul{
+    height: auto;   /*set the height of sub meun*/
+  }
+
+
+
+}
+
+/*meun---------------------------------------------------------------------------------------------------------------------*/
+.navbar ul {/*the whole menu*/
+  padding: 0; /*remove spaces on the left*/
+  border-style: solid ;   /*make a line cover the border*/
+  border-color: rgb(28,59,68);   /*color*/
+  border-radius: 30px;  /*make the border round*/
+  background-color: rgba(6, 24, 30, 255); /*color*/
+  opacity: .95;   /*add opacity to the meun*/
+
+  text-align: center;     /*center the list in middle*/
+  font-weight: bold;      /*bold the word*/
+  font-size: 18px;        /*set font size*/
+  
+} 
+
+.navbar li {/*each item of main menu*/
+  
+  display: inline-block; /*make the list item  line up in horizontal, inline mean one line can have more than one block*/
+  width: 120px;   /*set width of the item on the main list*/
+  padding: 15px;  /*set padding of the item on the main list*/
+}
+
+.navbar ul li a { /*the words of the main menu*/
+  
+  text-decoration: none;    /*make link dont have a underline and change color*/
+  color: rgba(232, 202, 123, 255); /*change the word color on the main list*/
+}
+
+.navbar ul li:hover { 
+  
+  background-color: rgba(20, 67, 86, 255);  /*color*/
+  border-bottom: 1px solid azure; /*set border*/
+  border-radius: 50px;    /*set border*/
+  transition: .4s ease-in-out;  /*set transition */
+}
+
+.navbar img {   /*icon*/
+  width: 60%;   /*set it smaller*/
+}
+
+.sub-meun {
+  
+  margin: -17px; /*add margin on left to make it in right place (outside the submeun)*/
+  position: absolute;   /*it position will be position according to the main meun*/
+  transform: scale(0.0);  /*hide the list*/
+
+}
+
+.sub-meun ul{
+  display: flex;    /*fill all width, only use its column property*/
+  flex-direction: column;  /*vertical*/
+
+}
+
+.navbar ul li:hover .sub-meun {
+  margin-top: 16px;     /*add margin on top to make it in right place*/
+  transform: scale(1);  /*display the list*/
+  transition: all 0.4s ease-out;
+  
+}
+
+/* index page content--------------------------------------------------------------------------------------------------------------------- */
+.topic{
+  margin: 5%;/*the place between border and opacity background*/
+  padding: 20px; /*word will not stick with line*/
+  border-radius: 10px;
+  opacity: .85;
+  border: 3px solid blue;
+}
+
+.main-content{/*the whole part*/
+  width: 80%; /*set width of opacity background*/
+  margin: auto;/*make the body in middle*/
+  font-size: 25px;
+  color: whitesmoke ;/*the biggest title*/
+  background-color: rgba(6, 24, 30, 0.8) ;
+  border: 1px solid #000000;
+}
+
+.main-content h1{
+  text-align: center;
+  border-width: 1px;
+  border-bottom: 3px solid rgb(43, 110, 129);
+}
+
+.main-content h2{
+  background-color: purple;
+  color:gold;
+  text-decoration: underline ;
+
+}
+
+.main-content h3{
+
+  color:burlywood;
+  text-decoration: underline ;
+
+}
+
+
+.main-content h5{
+  color:deeppink ;
+  text-align: right;
+}
+
+
+.main-content-img{
+  transition: transform 1s;
+}
+
+.main-content-img:hover{
+  transform: scale(1.4);
+}
+
+.main-content a{  /*css of the*/
+  color:aquamarine;
+  border: 5px inset rgb(111, 197, 221);
+  border-radius: 10px;
+  text-decoration: NONE;
+}
+
+.main-content a:hover{
+  color: aliceblue;
+}
+
+/*Item*/
+.item-set{
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: rgba(6, 24, 30, 0.8) ;
+  border: 1px solid #000000;
+
+}
+
+.item-photo {
+  padding: 5%;
+  display: inline-block;
+  transform: scale(1.5);
+  
+}
+
+img:hover {
+ transform: scale(2);
+ transition-duration: .2s;
+}
+
+.heading{
+  background-color: blue;
+color: darkorange;
+
+}
+
+.sub-heading{
+  color: deeppink;
+  text-decoration: underline;
+
+}
+/*     GoToTop Button       */
+.goToTop {
+  text-align: center;
+}
+
+#top {
+  width: 10%;
+  background-color: rgba(0, 186, 255, 0.81);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#top:hover {
+  background-color: yellow;
+}
+
+
+

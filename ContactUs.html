@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact us</title>
+  <link rel="icon" href="image/logo_2.jpg">
+  <link rel="stylesheet" href="css/ContactUs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body background="image/background.gif">
+  <!--menu-->
+  <!--nav bar     a ul contain li, and those li may contain  ul and li -->
+  <div class="navbar">
+    <ul>
+      <li><a href="main.html">
+          <div class="logo"> <img src="https://logodownload.org/wp-content/uploads/2014/09/lol-league-of-Legends-logo-1.png" alt="lol-logo">
+          </div>
+        </a>
+      </li>
+      <li><a> LOL</a>
+        <div class="sub-meun">
+          <ul>
+            <li><a href="main.html">📙How to play</a> </li>
+            <li><a href="item.html">Item</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a> Hero</a>
+        <div class="sub-meun">
+          <ul>
+            <li><a href="Morgana.html">✵ Morgana ✵</a> </li>
+            <li><a href="item.html">✵ Kayle ✵</a></li>
+          </ul>
+        </div>
+      </li>
+
+
+      <li><a href="lolChampionship.html">Teams</a>
+
+      </li>
+
+      <li><a>Resources</a>
+        <div class="sub-meun">
+          <ul>
+            <li><a href="https://lol.garena.tw/" target="_blank">Offical Website</a></li>
+            <li><a href="https://www.op.gg/" target="_blank">Useful Website</a></li>
+          </ul>
+        </div>
+      </li>
+      
+      <li><a href="ContactUs.html">Contact Us</a></li>
+    </ul>
+
+
+  </div>
+  <!--------------------------------Main Content----------------------->
+  <div class="main-content">
+    <h1>Contact Us</h1>
+    <form name="Form" action="" onsubmit="return submitSuccess()">
+      <!-----------------------------first fieldset-------------------------->
+      <div>*Means please fill the required field</div><br>
+      <fieldset class="fieldset">
+        <legend>Personal Information</legend>
+        <!----------------------------name------------------------------>
+        *Name:
+        <input type="text" placeholder="Name" onfocusout="checkVaild()" id="name" required><label id="nameLabel"></label><br>
+        <!----------------------------age------------------------------>
+        *Age:
+        <input type="number" min="3" max="100" size="2" required id="age"><br>
+        <!----------------------------gender------------------------------>
+        *Gender:
+        <input type="radio" name="Gender" value="M" checked>Male
+        <input type="radio" name="Gender" value="F">Female<br>
+        <!------------------------phone number------------------------>
+        *Mobile tel.
+        <input type="tel" pattern="[8][5][2][-][0-9]{8}" required placeholder="852-12345678" id="phone"><br>
+        <input type="checkbox" id="checkPhone" onclick="changeTel()"> I don't have a mobile number<br>
+        <!----------------------------country------------------------------>
+        *Country:
+        <select name="country">
+          <option value="HK">Hong Kong</option>
+          <option value="China">China</option>
+          <option value="USA">United States of America</option>
+        </select>
+
+        <!-----------------------------ranking-------------------------->
+        <div>
+          *Ranking:
+          <select name="ranking" onchange="MakeSuggest()">
+            <option value="C">Iron</option>
+            <option value="C">Bronze</option>
+            <option value="C">Silver</option>
+            <option value="C">Gold</option>
+            <option value="B">Platinum</option>
+            <option value="B">Diamond</option>
+            <option value="B">Master</option>
+            <option value="A">GrandMaster</option>
+            <option value="A">Challenger</option>
+          </select>
+        </div>
+        <!---------------------suggest message----------------------->
+        <a id="rankSuggest" target="_blank"></a>
+      </fieldset>
+      <br>
+      <!-----------------------second fieldset------------------------>
+      <fieldset class="fieldset">
+        <legend>Questionnaire</legend>
+        <!-------------------------account server------------------>
+        <div id="question">On which server do you have account?</div>
+        <input type="checkbox">North America<br>
+        <input type="checkbox">Korea<br>
+        <input type="checkbox">Oceania<br>
+        <input type="checkbox">EU-West<br>
+        <!------------------------play time--------------------->
+        <div id="question">How long do you played in the League of Legends?</div>
+        <select name="playedTime" id="playedTime">
+          <option value="lessOneMonth">Less than month</option>
+          <option value="oneMonthToHalfYear">Over month but less than half year</option>
+          <option value="halfyear">Over half year but less than year</option>
+          <option value="overyear">Over year</option>
+        </select>
+        <!------------------------why play lol----------------------->
+        <div id="question">Why you play League of Legends?</div>
+        <textarea name="greeting" cols="20" rows="7" placeholder="In less 200 words..."></textarea>
+        <!------------------------favorite hero----------------------->
+        <div id="question">Which champion do you prefer?</div>
+        <input type="radio" name="favCham" value="rakan">Rakan
+        <input type="radio" name="favCham" value="gragas">Gragas
+        <input type="radio" name="favCham" value="xayah">Xayah
+        <br>
+        <!------------------------evaluate lol----------------------->
+        <div id="question">How do you evaluate the game League of Legends? (1 star - too bad, 5 stars - excellent) </div>
+        <span class="fa fa-star" onmouseover="blueColor(1)" onclick="rating(1)"></span>
+        <span class="fa fa-star" onmouseover="blueColor(2)" onclick="rating(2)"></span>
+        <span class="fa fa-star" onmouseover="blueColor(3)" onclick="rating(3)"></span>
+        <span class="fa fa-star" onmouseover="blueColor(4)" onclick="rating(4)"></span>
+        <span class="fa fa-star" onmouseover="blueColor(5)" onclick="rating(5)"></span>
+        <!-----------------------email address-------------------->
+        <div id="question">
+          If you want to know overall results of this questionnaire please write your email address&#128515;.
+        </div>
+        Email address:
+        <input type="email" placeholder="Email Address" title="The email address must include the '@' sign"><br>
+      </fieldset>
+      <!----------------submit clear button------------------>
+      <div id="center">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset" onclick="goToName()">
+      </div>
+    </form>
+  </div>
+  <!------------------script------------------->
+  <script>
+    /*onmouseover change color to blue*/
+    function blueColor(num) {
+      /*Set the span star to an array*/
+      var x = document.querySelectorAll("span");
+      /*Remove the blue color*/
+      var p;
+      for (p = 0; p < 5; p++) {
+        x[p].classList.remove("star");
+      }
+      /*Add the blue color*/
+      var i;
+      for (i = 0; i < num; i++) {
+        x[i].classList.add("star");
+      }
+    }
+    /*onclick change color to yellow*/
+    function rating(num) {
+      /*Set the span star to an array*/
+      var x = document.querySelectorAll("span");
+      /*Remove the orange color*/
+      var p;
+      for (p = 0; p < 5; p++) {
+        x[p].classList.remove("checked");
+      }
+      /*Add the orange color*/
+      var i;
+      for (i = 0; i < num; i++) {
+        x[i].classList.add("checked");
+      }
+    }
+
+    /*Give suggest message to user*/
+    function MakeSuggest() {
+      var rank = document.Form.ranking.value;
+      if (rank == "A") {
+        document.getElementById("rankSuggest").innerHTML = "You play really good, Keep going!!";
+        document.getElementById("rankSuggest").removeAttribute("href");
+      } else if (rank == "B") {
+        document.getElementById("rankSuggest").innerHTML = "Work Hard";
+        document.getElementById("rankSuggest").removeAttribute("href");
+      } else {
+        document.getElementById("rankSuggest").innerHTML = "You too bad. Here is some suggestion for you to improve your ranking";
+        /* Add attribute href="https://na.op.gg/champion/statistics" */
+        document.getElementById("rankSuggest").setAttribute("href", "https://na.op.gg/champion/statistics");
+      }
+    }
+    /*Remove the mobile tel required*/
+    function changeTel() {
+      var checkBox = document.getElementById("checkPhone");
+      var theInput = document.getElementById("phone");
+      /* If checked set read only and clear the textbox*/
+      if (checkBox.checked == true) {
+        theInput.readOnly = true;
+        theInput.value = "";
+        theInput.removeAttribute("placeholder");
+        theInput.removeAttribute("required");
+      } else {
+        theInput.readOnly = false;
+        theInput.setAttribute("placeholder", "12345678");
+        theInput.setAttribute("required", "required");
+      }
+    }
+    /*Check name data is invalid, show text to notice user*/
+    function checkVaild() {
+      var tempname = document.getElementById("name").value;
+      if (tempname.trim().length == 0)
+        document.getElementById("nameLabel").innerHTML = "Please enter valid name!!!";
+      else
+        document.getElementById("nameLabel").innerHTML = "";
+    }
+
+    /* check data is valid. 
+        If valid show alert message*/
+    function submitSuccess() {
+      var x = document.getElementById("name").value.trim();
+      if (x == "") {
+        alert('Name value can not be space or null!!!');
+        goToName();
+        /* It will not submit the form*/
+        return false;
+      } else {
+        alert('Thank you for taking the time to fill out this questionnaire!!!');
+        return true;
+      }
+    }
+    /* back to name */
+    function goToName() {
+      document.documentElement.scrollTop = 0;
+    }
+
+  </script>
+</body>
+
+</html>

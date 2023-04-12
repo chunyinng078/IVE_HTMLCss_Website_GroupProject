@@ -1,0 +1,251 @@
+/*background*/
+body {
+  background-position: center;
+  /* center the bg*/
+  background-size: cover;
+  /* make the bg fit in full size*/
+  background-attachment: fixed;
+  /* no matter how you zoom the web, the background stay the same*/
+}
+
+/*Responsive Meun*/
+@media only screen and (max-width: 1000px){/*when width<1001px*/
+
+
+  .navbar ul{
+    height: 320px;
+    display: flex;    /*only use its column property*/
+    flex-direction: column;  /*vertical*/
+    align-items: center;  /*make verticaled column in middle*/
+  }
+  
+
+  .navbar .sub-meun ul{
+    height: auto;   /*set the height of sub meun*/
+  }
+
+
+
+}
+
+/*meun---------------------------------------------------------------------------------------------------------------------*/
+.navbar ul {/*the whole menu*/
+  padding: 0; /*remove spaces on the left*/
+  border-style: solid ;   /*make a line cover the border*/
+  border-color: rgb(28,59,68);   /*color*/
+  border-radius: 30px;  /*make the border round*/
+  background-color: rgba(6, 24, 30, 255); /*color*/
+  opacity: .95;   /*add opacity to the meun*/
+
+  text-align: center;     /*center the list in middle*/
+  font-weight: bold;      /*bold the word*/
+  font-size: 18px;        /*set font size*/
+  
+} 
+
+.navbar li {/*each item of main menu*/
+  
+  display: inline-block; /*make the list item  line up in horizontal, inline mean one line can have more than one block*/
+  width: 120px;   /*set width of the item on the main list*/
+  padding: 15px;  /*set padding of the item on the main list*/
+}
+
+.navbar ul li a { /*the words of the main menu*/
+  
+  text-decoration: none;    /*make link dont have a underline and change color*/
+  color: rgba(232, 202, 123, 255); /*change the word color on the main list*/
+}
+
+.navbar ul li:hover { 
+  
+  background-color: rgba(20, 67, 86, 255);  /*color*/
+  border-bottom: 1px solid azure; /*set border*/
+  border-radius: 50px;    /*set border*/
+  transition: .4s ease-in-out;  /*set transition */
+}
+
+.navbar img {   /*icon*/
+  width: 60%;   /*set it smaller*/
+}
+
+.sub-meun {
+  
+  margin: -17px; /*add margin on left to make it in right place (outside the submeun)*/
+  position: absolute;   /*it position will be position according to the main meun*/
+  transform: scale(0.0);  /*hide the list*/
+
+}
+
+.sub-meun ul{
+  display: flex;    /*fill all width, only use its column property*/
+  flex-direction: column;  /*vertical*/
+
+}
+
+.navbar ul li:hover .sub-meun {
+  margin-top: 16px;     /*add margin on top to make it in right place*/
+  transform: scale(1);  /*display the list*/
+  transition: all 0.4s ease-out;
+  
+}
+
+
+
+/* flex-container */
+#flex-container {
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
+  color: #d0c8af;
+  background-color: rgba(6, 24, 30, 0.8);
+  border: 1px solid #000000;
+  padding: 4%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* format the container */
+#Overview,
+#Champions,
+#Skills,
+#Items,
+#Runes,
+#Video {
+  border: 5px dotted #1C6EA4;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 20px;
+}
+
+#Overview {
+  order: 1;
+  width: 100%;
+}
+
+#Champions {
+  Order: 2;
+  width: 100%;
+}
+
+#Skills {
+  Order: 3;
+  width: 120px;
+}
+
+#Items {
+  Order: 4;
+  flex-grow: 1;
+}
+
+#Runes {
+  Order: 5;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#Video {
+  Order: 6;
+  width: 100%;
+  text-align: center;
+}
+
+/*format all the img in flex-container*/
+#flex-container img {
+  border: 3px solid #12b27b;
+  border-radius: 15px;
+}
+
+/*lets Skills text and image center*/ 
+#center{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* floating right*/
+#Champions img {
+  float: right;
+}
+
+#Overview img {
+  height: auto;
+  width: 100%;
+}
+
+#Runes img {
+  height: auto;
+  width: 80%;
+  margin: 10px;
+}
+
+/* format the skills img */
+#Skills img {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* format the items table */
+table {
+  height: 80%;
+  width: 100%;
+}
+
+/* set the skills by column */
+#flexSkills {
+  display: flex;
+  flex-direction: column;
+}
+
+/* format video iframe */
+iframe {
+  border: 2px solid #2baf81;
+  width: 80%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+/*     GoToTop Button       */
+.goToTop {
+  text-align: center;
+}
+
+#top {
+  width: 10%;
+  background-color: rgb(0, 252, 232);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#top:hover {
+  background-color: yellow;
+}
+
+@media only screen and (max-width: 800px) {
+  #Skills {
+    width: 100%;
+  }
+
+  /* set the skills by row */
+  #flexSkills {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  #Runes {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  /* it will not display video container */
+  #Video {
+    display: none;
+  }
+}
